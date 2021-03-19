@@ -1,19 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>APOTD Album Maker</title>
+<%- include ("../partials/head.ejs") %>
+<title>APOD Album Maker</title>
 </head>
+
 <body>
-  <button id="viewapotd">View APOTD</button>
-  <div id="outputdiv"></div>
-  <div id="date"></div>
-  <div id="title"></div>
-  <div id="explination"></div>
-  <img src="" id="hdurl"></img>
+  <header>
+    <h1>Astromony Photo of the Day Album Maker</h1>
+    <p class="welcomep">Welcome to the APOD album maker. Here you can search for photos from the NASA APOD API and
+      save
+      your favorites to make you own photo album. Here you can select the current APOD or search ten random photos at a time to find
+     the perfect one.</p>
+  </header>
+  <main>
+    <button onclick="fetchData()" id="viewapotd">View APOD</button><br><br>
+    <form action="/search" method="GET">
+    <label for="search">Search Random Photos</label>
+    <input type="submit" value="Go">
+    </form>
+    <br><br>
+    <div id="outputdiv"></div>
+    <div id="title"></div>
+    <div id="date"></div>
+    <div id="explination"></div>
+    <p class='imgp'><img src="" id="hdurl"></img></p>
+  </main>
 </body>
 <script src="/js/ajax.js"></script>
+
 <script type="text/javascript" src="/js/config.js"></script>
+
 </html>

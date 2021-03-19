@@ -1,0 +1,27 @@
+<%- include ("../partials/head.ejs") %>
+<title>APOD Album Maker</title>
+</head>
+
+<body onload="search()">
+  <main>
+    <div id="detailsdiv">
+      <img id="photo" src="">
+      <p id="copyright"></p>
+      <h1 id="title"></h1>
+      <p id="date"></p>
+      <p id="explanation"></p>
+    </div>
+    <div id="outputdiv"></div>
+    <ul id="photoul"></ul>
+
+
+
+    <button onclick="search()">See More</button>
+
+  </main>
+</body>
+<script src="/js/ajax.js"></script>
+
+<script src="/js/config.js"></script>
+
+</html>

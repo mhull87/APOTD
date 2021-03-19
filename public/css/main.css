@@ -1,0 +1,57 @@
+body {
+  margin: auto;
+  max-width: 950px;
+  padding: 2%;
+}
+
+.hidden {
+  display: none;
+}
+
+h1, h2, h3, li {
+  font-family: 'Merienda One', cursive;
+}
+
+.welcomep {
+  padding: 2% 5% 2%;
+}
+
+img {
+  width: 200px;
+  max-width: 100%;
+}
+
+.imgp {
+  text-align: center;
+}
+
+#title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#date {
+  text-align: center;
+  font-weight: bold;
+}
+
+#outputdiv {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+  padding-top: 5%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+hr {
+  margin-top: 5%;
+}
+
+.detailsbtn {
+  
+}
