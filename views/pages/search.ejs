@@ -5,7 +5,7 @@
 <body onload="search()">
   <main>
     <div id="detailsdiv">
-      <img id="photo" src="">
+      <p class='marginauto'><img id="photo" src=""></p>
       <p id="copyright"></p>
       <h1 id="title"></h1>
       <p id="date"></p>
@@ -13,6 +13,14 @@
     </div>
     <div id="outputdiv"></div>
     <ul id="photoul"></ul>
+    <form action="/save" method="post">
+      <input type="hidden" name="title" id="ftitle" value="">
+      <input type="hidden" name="date" id="fdate" value="">
+      <input type="hidden" name="explanation" id="fexplanation" value="">
+      <input type="hidden" name="copyright" id="fcopyright" value="">
+      <input type="hidden" name="hdurl" id="fhdurl" value="">
+      <input type="submit" value="Save">
+    </form>
 
 
 

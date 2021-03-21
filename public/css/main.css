@@ -51,3 +51,11 @@ li {
 hr {
   margin-top: 5%;
 }
+
+#photo {
+  width: fit-content;
+}
+
+.marginauto {
+  margin: auto;
+}

@@ -69,9 +69,15 @@ function details(data) {
   document.getElementById('date').innerHTML = data.date;
   document.getElementById('explanation').innerHTML = data.explanation;
   document.getElementById('photo').src = data.hdurl;
+  document.getElementById('ftitle').value = data.title;
+  document.getElementById('fdate').value = data.date;
+  document.getElementById('fexplanation').value = data.explanation;
+  document.getElementById('fhdurl').value = data.hdurl;
+
 
   if (data.copyright) {
     document.getElementById('copyright').innerHTML = `&copy; ${data.copyright}`;
+    document.getElementById('fcopyright').value = data.copyright;
   } else {
     document.getElementById('copyright').innerHTML = '';
   }
