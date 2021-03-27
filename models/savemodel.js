@@ -19,10 +19,9 @@ function savenewphoto(title, hdurl, date, explanation, copyright, callback) {
       var results = db_results.rows;
     };
   callback(null, results)
-  })
-;
+  });
 }
 
 module.exports = {
-  savenewphoto: savenewphoto
+  savenewphoto: savenewphoto,
 }

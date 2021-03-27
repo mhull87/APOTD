@@ -1,3 +1,4 @@
+
 const apiButton = document.getElementById('viewapotd');
 const outputDiv = document.getElementById('outputdiv');
 const date = document.getElementById('date');
@@ -13,6 +14,7 @@ const fetchData = async () => {
   try {
     const response = await fetch(`${apiURL}${api_key}`)
     const data = await response.json()
+    document.getElementById('hidden').classList.remove('hidden');
     display(data)
     console.log(data)
   } catch (err) {
@@ -25,7 +27,12 @@ function display(data) {
   title.textContent = data.title;
   hdurl.src = data.hdurl;
   explination.textContent = data.explanation;
-}
+  document.getElementById('ftitle').value = data.title;
+  document.getElementById('fdate').value = data.date;
+  document.getElementById('fhdurl').value = data.hdurl;
+  document.getElementById('fexplanation').value = data.explanation;
+  document.getElementById('fcopyright').value = data.copyright;
+  }
 
 const searchURL = 'https://api.nasa.gov/planetary/apod?count=10&api_key=';
 //const api_key = config.NASA_API_KEY;

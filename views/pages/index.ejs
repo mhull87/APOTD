@@ -11,6 +11,9 @@
      the perfect one.</p>
   </header>
   <main>
+    <form action="/myalbum" method="GET">
+    <input type="submit" value="My Album">
+    </form>
     <button onclick="fetchData()" id="viewapotd">View APOD</button><br><br>
     <form action="/search" method="GET">
     <label for="search">Search Random Photos</label>
@@ -22,7 +25,14 @@
     <div id="date"></div>
     <div id="explination"></div>
     <p class='imgp'><img src="" id="hdurl"></img></p>
-    
+    <form id='hidden' class='hidden' action="/save" method="post">
+      <input type="hidden" name="title" id="ftitle" value="">
+      <input type="hidden" name="date" id="fdate" value="">
+      <input type="hidden" name="explanation" id="fexplanation" value="">
+      <input type="hidden" name="copyright" id="fcopyright" value="">
+      <input type="hidden" name="hdurl" id="fhdurl" value="">
+      <input type="submit" value="Save">
+    </form>
   </main>
 </body>
 <script src="/js/ajax.js"></script>

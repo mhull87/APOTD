@@ -2,10 +2,45 @@
 <title>APOD Album Maker</title>
 </head>
 
-<body onload="getmyalbum()">
+<body>
 <h1>My Album</h1>
+<button><a href="/">Home Page</a></button>
+<form action="/searchalbum" method="GET">
+  <label for="keyword">Search By Keyword</label>
+<input type="text" name="keyword" id='keyword'>
+<input type="submit" value="Search">
+</form>
 
-
+<ul id="myalbum">
+<% for(var i = 0; i < results.result.length; i++) { %>
+    <li><%= results.result[i].header %></li>
+    <li><%= results.result[i].notes %></li>
+    <li><img src="<%= results.result[i].hdurl %>" title="<%= results.result[i].title %>"></li>
+    <form action="/details" method="POST">
+      <input type="hidden" name="id" id="id" value="<%= results.result[i].id %>">
+      <input type="submit" value="Details">
+    </form>
+    <form action="/editview" method="POST">
+      <input type="hidden" name="title" id="ftitle" value="<%= results.result[i].title %>">
+      <input type="hidden" name="hdurl" id="fhdurl" value="<%= results.result[i].hdurl %>">
+      <input type="hidden" name="header" id="fheader" value="<%= results.result[i].header %>">
+      <input type="hidden" name="notes" id="fnotes" value="<%= results.result[i].notes %>">
+      <input type="hidden" name="id" id="id" value="<%= results.result[i].id %>">
+      <input type="submit" value="Edit">
+    </form>
+    <form action="/deleteview" method="POST">
+      <input type="hidden" name="title" id="ftitle" value="<%= results.result[i].title %>">
+      <input type="hidden" name="date" id="fdate" value="<%= results.result[i].date %>">
+      <input type="hidden" name="explanation" id="fexplanation" value="<%= results.result[i].explanation %>">
+      <input type="hidden" name="copyright" id="fcopyright" value="<%= results.result[i].copyright %>">
+      <input type="hidden" name="hdurl" id="fhdurl" value="<%= results.result[i].hdurl %>">
+      <input type="hidden" name="header" id="fheader" value="<%= results.result[i].header %>">
+      <input type="hidden" name="notes" id="fnotes" value="<%= results.result[i].notes %>">
+      <input type="hidden" name="id" id="id" value="<%= results.result[i].id %>">
+      <input type="submit" value="Delete">
+    </form>
+    <% } %>
+</ul>
 </body>
 <script src="/js/ajax.js"></script>
 

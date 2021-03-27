@@ -1,0 +1,21 @@
+<%- include ("../partials/head.ejs") %>
+<title>Delete: <%= title %></title>
+</head>
+
+<body>
+  <h1>Are you sure you want to delete: <%= title %>?</h1>
+  <p><%= date %></p>
+  <img src="<%= hdurl %>" title="<%= hdurl %>">
+  <p><%= copyright %></p>
+  <p><%= explanation %></p>
+  <h2><%= header %></h2>
+  <h3>My Notes:</h3>
+  <p><%= notes %></p>
+  <form action="/delete" method="POST">
+    <input type="hidden" id="id" name="id" value="<%= id %>">
+    <input type="submit" value="Delete">
+  </form>
+  <button><a href="/myalbum">Keep It</a></button>
+</body>
+
+</html>
