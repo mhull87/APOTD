@@ -69,14 +69,16 @@ function deletephoto(id, callback) {
 }
 
 function searchalbum(keyword, callback) {
-  var key = '%' + keyword + '%';
+  var key = "%" + keyword + "%";
+  console.log(key)
   var sql = "SELECT * FROM myalbum WHERE header LIKE $1::text";
   var params = [key];
   pool.query(sql, params, function(err, db_results) {
     if (err) {
       console.log(err);
     } else {
-      var results = db_results.rows;
+      var results = {
+        result: db_results.rows};
       console.log(results)
     }
     callback(null, results);

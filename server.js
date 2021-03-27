@@ -49,7 +49,7 @@ app.post('/deleteview', function (req, res) {
 
  app.post("/save", savecontroller.save);
 
- app.get('/searchalbum', albumcontroller.search);
+ app.post('/searchalbum', albumcontroller.search);
 
 app.listen(app.get("port"), function() {
   console.log("Now listening on port: ", app.get("port"));
