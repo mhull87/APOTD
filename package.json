@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Astronomy Photo of the Day Album Maker",
   "engines": {
-    "node": "14.x"
+    "node": "14.16.0"
   },
   "main": "server.js",
   "scripts": {
