@@ -40,7 +40,7 @@ function search(req, res) {
   albummodel.searchalbum(keyword, function(err, results) {
     console.log(results)
     res.render("pages/details.ejs", {
-      results
+      results, keyword
     })
   })
 }

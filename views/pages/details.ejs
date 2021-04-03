@@ -1,25 +1,26 @@
 <%- include ("../partials/head.ejs") %>
-<title>APOD Album Maker</title>
-</head>
-<body>
-      <button><a href="/myalbum">Back to My Album</a></button>
+<main>
+
   <div id="detailsdiv">
     <% for(var i = 0; i < results.result.length; i++) { %>
-      <h1><% if(results.result[i].header) { %>
-        <%= results.result[i].header %>
-      <% } %></h1>
-      <h2><%= results.result[i].title %></h2>
-      <img src="<%= results.result[i].hdurl %>" title="<%= results.result[i].title %>">
-      <p>&copy;<%= results.result[i].copyright %></p>
-      <h3><%= results.result[i].date %></h3>
-      <p><%= results.result[i].explanation %></p>
-      <% if(results.result[i].notes) { %>
-        <h2>My Notes</h2>
-      <p>
-        <%= results.result[i].notes %>
+    <h2><%= results.result[i].title %></h2>
+    <% if(results.result[i].header) { %>
+      <h4>Keywords: <%= results.result[i].header %>
+      <% } %></h4>
+    <img src="<%= results.result[i].hdurl %>" title="<%= results.result[i].title %>">
+    <% if(results.result[i].copyright) { %>
+    <p>&copy;<%= results.result[i].copyright %></p>
+    <% } %>
+    <h3><%= results.result[i].date %></h3>
+    <p><%= results.result[i].explanation %></p>
+    <% if(results.result[i].notes) { %>
+    <h2>My Notes</h2>
+    <p>
+      <%= results.result[i].notes %>
       <% } %></p>
-      <% } %>
-      </div>
-
+    <% } %>
+  </div>
+</main>
 </body>
+
 </html>

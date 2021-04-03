@@ -1,32 +1,30 @@
 <%- include ("../partials/head.ejs") %>
-<title>APOD Album Maker</title>
-</head>
 
-<body onload="search()">
-  <main>
-    <div id="detailsdiv">
-      <p class='marginauto'><img id="photo" src=""></p>
-      <p id="copyright"></p>
-      <h1 id="title"></h1>
-      <p id="date"></p>
-      <p id="explanation"></p>
-    </div>
-    <div id="outputdiv"></div>
-    <ul id="photoul"></ul>
-    <form action="/save" method="post">
-      <input type="hidden" name="title" id="ftitle" value="">
-      <input type="hidden" name="date" id="fdate" value="">
-      <input type="hidden" name="explanation" id="fexplanation" value="">
-      <input type="hidden" name="copyright" id="fcopyright" value="">
-      <input type="hidden" name="hdurl" id="fhdurl" value="">
-      <input type="submit" value="Save">
-    </form>
+<main onload="search()">
+  <h2 id="header">Random Photos</h2>
+  <div id="detailsdiv">
+    <p class='marginauto'><img id="photo" src=""></p>
+    <p id="copyright"></p>
+    <h1 id="title"></h1>
+    <p id="date"></p>
+    <p id="explanation"></p>
+  </div>
+  <div id="outputdiv"></div>
+  <ul id="photoul"></ul>
+  <form class="hidden" id="savebtn" action="/save" method="post">
+    <input type="hidden" name="title" id="ftitle" value="">
+    <input type="hidden" name="date" id="fdate" value="">
+    <input type="hidden" name="explanation" id="fexplanation" value="">
+    <input type="hidden" name="copyright" id="fcopyright" value="">
+    <input type="hidden" name="hdurl" id="fhdurl" value="">
+    <input type="submit" value="Save">
+  </form><br>
 
+  <button id='firstbtn' onclick="search()">See Random Photos</button>
 
+  <button id='secondbtn' class="hidden" onclick="search()">See More</button>
 
-    <button onclick="search()">See More</button>
-
-  </main>
+</main>
 </body>
 <script src="/js/ajax.js"></script>
 

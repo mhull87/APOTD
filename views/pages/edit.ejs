@@ -1,10 +1,8 @@
 <%- include ("../partials/head.ejs") %>
-<title>Edit: <%= title %></title>
-</head>
-
-<body>
-  <h1>Edit <%= title %></h1>
-  <img src="<%= hdurl %>" title="<%= hdurl %>">
+<main>
+  <h2>Edit <%= title %></h2>
+  <div class='center'>
+  <img class="small" src="<%= hdurl %>" title="<%= hdurl %>">
   <form action="/edit" method="POST">
     <label for="header">Keywords:</label><br>
     <input type="text" id="header" name="header" value="<%= header %>"><br><br>
@@ -12,7 +10,8 @@
     <input type="text" id="notes" name="notes" value="<%= notes %>"><br><br>
     <input type="hidden" id="id" name="id" value="<%= id %>">
     <input type="submit" value="Save">
-  </form>
+  </form></div>
+</main>
 </body>
 
 </html>

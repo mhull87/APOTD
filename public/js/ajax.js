@@ -51,7 +51,11 @@ const search = async () => {
 
 function searchResults(data) {
   outputDiv.innerHTML = '';
+  document.getElementById('header').classList.remove('hidden');
+  document.getElementById('secondbtn').classList.remove('hidden');
+  document.getElementById('firstbtn').classList.add('hidden');
   document.getElementById('detailsdiv').classList.add('hidden');
+  document.getElementById('savebtn').classList.add('hidden');
   for (var i = 0; i < data.length; i++) {
     if (data[i].media_type == "image") {
       var ul = document.getElementById('photoul');
@@ -59,6 +63,7 @@ function searchResults(data) {
       var img = document.createElement('img');
       var hr = document.createElement('hr');
       img.src = data[i].hdurl;
+      img.classList.add('small');
 
       li.innerHTML = `${data[i].title}<br><button class='detailsbtn' onclick='details(${JSON.stringify(data[i]).replace(/[\']/g, "&apos;")})'>Details</button><br><br>`;
 
@@ -70,6 +75,8 @@ function searchResults(data) {
 }
 
 function details(data) {
+  document.getElementById('header').classList.add('hidden');
+  document.getElementById('savebtn').classList.remove('hidden');
   document.getElementById('detailsdiv').classList.remove('hidden');
   document.getElementById('photoul').innerHTML = "";
   document.getElementById('title').innerHTML = data.title;
@@ -89,3 +96,4 @@ function details(data) {
     document.getElementById('copyright').innerHTML = '';
   }
 }
+
