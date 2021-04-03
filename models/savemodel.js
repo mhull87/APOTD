@@ -14,7 +14,7 @@ function savenewphoto(title, hdurl, date, explanation, copyright, callback) {
   params = [title, hdurl, date, explanation, copyright];
   pool.query(sql, params, function(err, db_results) {
     if (err) {
-      throw err;
+      console.log(err);
     } else {
       var results = db_results.rows;
     };
