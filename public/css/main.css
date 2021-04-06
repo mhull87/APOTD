@@ -53,7 +53,11 @@ button, input[type=submit]:not(.nav) {
   background-color: #4c96d7;
   border-radius: 25px;
   padding: 5px 10px;
-  text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+
 }
 
 .navlist li {
