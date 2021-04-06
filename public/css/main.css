@@ -47,10 +47,13 @@ li {
 
 .btn {
   padding: 0 2% 2%;
-
 }
 
-
+button, input[type=submit]:not(.nav) {
+  background-color: #4c96d7;
+  border-radius: 25px;
+  padding: .5% 2%;
+}
 
 .navlist li {
   list-style: none;
