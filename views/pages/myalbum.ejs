@@ -16,26 +16,26 @@
 
       <li class="btns">
         <form class='btn' action="/details" method="POST">
-          <input type="hidden" name="id" id="id" value="<%= results.result[i].id %>">
+          <input type="hidden" name="id" value="<%= results.result[i].id %>">
           <input type="submit" value="Details">
         </form>
         <form class='btn' action="/editview" method="POST">
-          <input type="hidden" name="title" id="ftitle" value="<%= results.result[i].title %>">
-          <input type="hidden" name="hdurl" id="fhdurl" value="<%= results.result[i].hdurl %>">
-          <input type="hidden" name="header" id="fheader" value="<%= results.result[i].header %>">
-          <input type="hidden" name="notes" id="fnotes" value="<%= results.result[i].notes %>">
-          <input type="hidden" name="id" id="id" value="<%= results.result[i].id %>">
+          <input type="hidden" name="title" value="<%= results.result[i].title %>">
+          <input type="hidden" name="hdurl" value="<%= results.result[i].hdurl %>">
+          <input type="hidden" name="header" value="<%= results.result[i].header %>">
+          <input type="hidden" name="notes" value="<%= results.result[i].notes %>">
+          <input type="hidden" name="id" value="<%= results.result[i].id %>">
           <input type="submit" value="Edit">
         </form>
         <form class='btn' action="/deleteview" method="POST">
-          <input type="hidden" name="title" id="ftitle" value="<%= results.result[i].title %>">
-          <input type="hidden" name="date" id="fdate" value="<%= results.result[i].date %>">
-          <input type="hidden" name="explanation" id="fexplanation" value="<%= results.result[i].explanation %>">
-          <input type="hidden" name="copyright" id="fcopyright" value="<%= results.result[i].copyright %>">
-          <input type="hidden" name="hdurl" id="fhdurl" value="<%= results.result[i].hdurl %>">
-          <input type="hidden" name="header" id="fheader" value="<%= results.result[i].header %>">
-          <input type="hidden" name="notes" id="fnotes" value="<%= results.result[i].notes %>">
-          <input type="hidden" name="id" id="id" value="<%= results.result[i].id %>">
+          <input type="hidden" name="title" value="<%= results.result[i].title %>">
+          <input type="hidden" name="date" value="<%= results.result[i].date %>">
+          <input type="hidden" name="explanation" value="<%= results.result[i].explanation %>">
+          <input type="hidden" name="copyright" value="<%= results.result[i].copyright %>">
+          <input type="hidden" name="hdurl" value="<%= results.result[i].hdurl %>">
+          <input type="hidden" name="header" value="<%= results.result[i].header %>">
+          <input type="hidden" name="notes" value="<%= results.result[i].notes %>">
+          <input type="hidden" name="id" value="<%= results.result[i].id %>">
           <input type="submit" value="Delete">
         </form>
       </li>
@@ -43,9 +43,9 @@
     <% } %>
   </div>
 </main>
-</body>
+
 <script src="/js/ajax.js"></script>
 
 <script src="/js/config.js"></script>
-
+</body>
 </html>

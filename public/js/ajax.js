@@ -63,6 +63,7 @@ function searchResults(data) {
       var img = document.createElement('img');
       var hr = document.createElement('hr');
       img.src = data[i].hdurl;
+      img.alt = data[i].title;
       img.classList.add('small');
 
       li.innerHTML = `${data[i].title}<br><button class='detailsbtn' onclick='details(${JSON.stringify(data[i]).replace(/[\']/g, "&apos;")})'>Details</button><br><br>`;
